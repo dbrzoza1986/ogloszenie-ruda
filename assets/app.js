@@ -6,7 +6,7 @@
 
 // Phone number for the contact button (international format).
 // Replace with the real number; it stays hidden until the visitor clicks "Pokaż numer".
-const PHONE = '+48000000000';
+const PHONE = '+49 1515 9883371';
 
 // Photos shown in the gallery. Put your files in the images/ folder
 // and list them here in display order.
@@ -138,7 +138,7 @@ phoneBtn.addEventListener('click', (e) => {
 document.getElementById('shareBtn').addEventListener('click', async () => {
   const data = {
     title: 'Sprzedam mieszkanie 50 m² — Ruda k. Wyrzyska',
-    text: '2 pokoje, 1 piętro, umeblowane — 255 000 PLN',
+    text: '2 pokoje, 1 piętro, umeblowane — 180 000 PLN',
     url: window.location.href,
   };
   try {
