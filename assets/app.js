@@ -119,32 +119,3 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') setMain(current + 1);
 });
 
-/* =========================================================
- * Contact: phone reveal + share
- * =======================================================*/
-const phoneBtn = document.getElementById('phoneBtn');
-const phoneLabel = document.getElementById('phoneLabel');
-let phoneRevealed = false;
-
-phoneBtn.addEventListener('click', () => {
-  if (!phoneRevealed) {
-    phoneLabel.textContent = PHONE;
-    phoneRevealed = true;
-  }
-});
-
-document.getElementById('shareBtn').addEventListener('click', async () => {
-  const data = {
-    title: 'Sprzedam mieszkanie 50 m² — Ruda k. Wyrzyska',
-    text: '2 pokoje, 1 piętro, umeblowane — 180 000 PLN',
-    url: window.location.href,
-  };
-  try {
-    if (navigator.share) {
-      await navigator.share(data);
-    } else {
-      await navigator.clipboard.writeText(window.location.href);
-      alert('Link skopiowany do schowka.');
-    }
-  } catch (_) { /* user cancelled */ }
-});
