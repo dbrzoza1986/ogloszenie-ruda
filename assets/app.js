@@ -126,10 +126,11 @@ const phoneBtn = document.getElementById('phoneBtn');
 const phoneLabel = document.getElementById('phoneLabel');
 let phoneRevealed = false;
 
-phoneBtn.href = 'tel:' + PHONE.replace(/\s+/g, '');
+phoneBtn.removeAttribute('href');
+phoneBtn.style.cursor = 'pointer';
 phoneBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   if (!phoneRevealed) {
-    e.preventDefault();
     phoneLabel.textContent = PHONE;
     phoneRevealed = true;
   }
