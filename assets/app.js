@@ -83,7 +83,8 @@ PHOTOS.forEach((src, i) => {
   thumbStrip.appendChild(btn);
 });
 
-setMain(0);
+// Start the gallery on photo 6 (shown as the main image).
+setMain(5);
 
 /* =========================================================
  * Lightbox
