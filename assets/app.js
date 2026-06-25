@@ -126,10 +126,7 @@ const phoneBtn = document.getElementById('phoneBtn');
 const phoneLabel = document.getElementById('phoneLabel');
 let phoneRevealed = false;
 
-phoneBtn.removeAttribute('href');
-phoneBtn.style.cursor = 'pointer';
-phoneBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+phoneBtn.addEventListener('click', () => {
   if (!phoneRevealed) {
     phoneLabel.textContent = PHONE;
     phoneRevealed = true;
